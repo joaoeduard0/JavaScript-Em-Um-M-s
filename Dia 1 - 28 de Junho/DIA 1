@@ -1,0 +1,353 @@
+#Dia 1 do estudo de JavaScript!
+
+<section>
+<h2>PARA INICIAR O JAVASCRIPT, É NECESSÁRIO USAR A TAG <script>...</script>!</h2>
+
+- 1. Para dar valor as variáveis usa-se o comando "var"
+    Ex1:
+        var jogador = "Bruno" ~ variáveis em string (palavras ou letras) deve-se usar os parênteses, já os números (int) não.
+        
+    Ex2: var acertos = 5
+- 2. Para printar essas variáveis usa-se o comando "document.write(variável a ser printada)
+
+Um detalhe a observar é que embora usamos três valores diferentes, string, float e int, o valor que a variável armazenará é sempre o último que foi atribuído.
+
+var jogador = "carlos"
+var jogador = "eduardo"
+var jogador = "joão"
+
+Neste caso o valor da variável será joão, um valor vai substituindo o outro.
+</section>
+
+<section>
+Veja outro exemplo a baixo:
+<script>
+  var jogador="Ynara";
+  var vidas=2;
+  var municao=25;
+  
+  document.write(jogador);
+  document.write(vidas);
+  document.write(municao);
+  
+O resultado do código acima será:
+
+  "Ynara225"
+  
+Os valores naturalmente são printados um do lado do outro, para coloca-los um abaixo do outro, usa-se o comando "<br>", o código será o seguinte:
+
+  Ex1:
+      document.write(jogador + "<br>")
+      document.write(vidas + "<br>")
+      document.write(municao + "<br>")
+  
+ O *PRINT* deverá ser o seguinte:
+ Ynara
+ 2
+ 25
+
+Também é possível apresentar mais detalhes:
+  Ex2:
+    document.write("Nome: " + jogador + "<br>");
+    document.write("Vidas: " + vidas + "<br>");
+    document.write("Munição: " + municao + "<br>");
+    
+  O print será:
+  Nome: Ynara
+  Vidas: 2
+  Municao: 25
+
+A seguir, será apresentado um exemplo de cálculo usando string e números, no qual o resultado dará 20:
+<script>
+  var jogador="Ynara";
+  var vidas=2;
+  var municao=25;
+  var pontos=0;
+  
+document.write("Nome: " + jogador + "<br>");
+document.write("Vidas: " + vidas + "<br>");
+document.write("Munição: " + municao + "<br>");
+document.write("Pontos: " + (pontos + (vidas * 10)) + "<br>");
+</script>
+
+O print deverá ser:
+  Nome: Ynara
+  Vidas: 2
+  Municao: 25
+  Pontos: 20
+  
+Podemos ainda adicionar estilos com o uso do CSS inline (ou seja, sem precisar abrir um arquivo específico .css e fazendo as alterações
+diretamente no código:
+  
+  Ex1:
+    document.write("Nome: <span style='color:#F00'>" + jogador + "</span><br>");
+    document.write("Vidas: <span style='color:#F00'>" + vidas + "</span><br>");
+    document.write("Munição: <span style='color:#F00'>" + municao + "</span><br>");
+    document.write("Pontos: <span style='color:#F00'>" + (pontos + (vidas * 10)) + "</span><br>");
+    
+    P.s: Com essa formatação, o print deverá aparecer *todas* as respostas em vermelho.
+
+
+CONSTANTES:
+Constantes tem uma diferença importante em relação às variáveis:
+elas não podem ser modificadas, uma vez declarada a atribuída uma constantes, seu valor não pode mais ser modificado.
+
+  Ex1:
+      <script>
+        const max=10;
+        const min=5;
+        
+        document.write(max + "<br>" + min);
+      </script>
+
+  O print será apenas a impressão das duas constantes, que são:
+  10
+  5
+  
+  Um detalhe interessante, é que a constante não necessita de tag especial para quebra de linha, nesse caso.
+  
+  - Uma constante pode ser usada em qualquer lugar do programa, como uma variável, podemos utilizar em cálculos e impressões
+  a única coisa que não podemos fazer é alterar seu valor.
+
+  Ex2:
+      <script>
+        const max=10;
+        const min=5;
+        max=8;
+        
+        document.write(max + "<br>" + min);
+      </script>
+      
+ - Nesse caso, o codigo "max" não terá funcionalidade nenhuma, e ainda por cima, está incorreto.
+ 
+ CONSOLE.LOG()
+ 
+ Podemos ativar o modo console para testar variáveis e outros dados no código,
+ por exemplo, se quiser saber o valor de uma variável sem ter que imprimir na tela.
+ 
+Para ativar o modo bastar usar a tecla “F12”.
+
+  Ex1:
+     <script>
+        num=20+30
+        console.log(num);
+    </script>
+
+Na tela não é impresso nada, mas vamos ativar o modo console, pressione a tecla “F12” dentro do seu navegador ou clique com o botão direito
+e depois a opção "inspecionar elemento" e será aberto o modo console.
+
+Depois na guia “Console”, e veja que estará mostrando o valor da variável “num”.
+
+CAIXA DE MENSAGENS
+
+A caixa de mensagem mais simples é a caixa “alert”, mostra uma mensagem simples com um botão somente o botão OK, o comando é bem simples
+basta inserir o conteúdo que será mostrado na caixa de texto dentro dos parênteses.
+
+  Ex1:
+      <script>
+        alert("Repositório de João Eduardo");
+      </script>
+
+- Pode-se usar a mesma lógica usada no método write para configurar um texto a ser mostrado:
+
+  Ex2:
+      <script>
+        var insta="instagram.com/joaoduardo";
+        alert("Instagram de João Eduardo\n" + insta);
+      </script>
+
+P.s: O \n é um comando de quebra de linha.
+
+PROMPT
+
+A caixa de mensagens prompt se diferencia por possibilitar a entrada de texto
+permitindo que esse texto seja coletado e passado a uma variável:
+
+  Ex1:
+      <script>
+        var nome;
+        nome=prompt("Por favor digite seu nome","Digite seu nome aqui");
+        
+        document.write(nome);
+</script>
+
+- A syntaxe do prompt é: prompt("Texto principal a ser mostrado","Valor inicial mostrado na caixa de texto");
+
+CONFIRM
+
+Sua funcionalidade mais importante é o retorno de qual dos botões foi pressionado, caso seja clicado em Ok a caixa retorna o valor “true” e 
+caso seja clicado Cancelar a caixa retorna o valor “false”.
+Para tomar uma decisão após o clique basta usarmos o comando IF
+mas podemos armazenar este retorno também em uma variável.
+
+  Ex1:
+      <script>
+        var opc;
+        opc=confirm("Deseja continuar?");
+        
+        document.write(opc);
+      </script>
+      
+Se o botão OK for clicado o método retorna “true” (verdadeiro)
+e se Cancelar for clicado o método retorn “false” (falso), tornando assim a variável opc como do tipo *boolean*.
+
+Na sequência, imprime-se o valor "true" ou "false" na tela.
+
+ESTRUTURA DE DECISÃO
+
+Ex1:
+    <script>
+      var vidas=3;
+      if(vidas > 0){
+  
+        document.write("Jogador vivo");
+      }
+    </script>
+    
+O código acima cria uma variável chamada vidas e a inicia com o valor 3.
+o teste retorna verdadeiro, então, será impresso na tela o texto “Jogador vivo”.
+
+IF e ELSE
+
+Podemos incrementar nosso comando IF com o uso do ELSE, que pode ser entendido como “caso contrário”.
+
+   Ex1:
+      <script>
+        var vidas=3;
+        if(vidas > 0){
+          document.write("Jogador vivo");
+        }else{
+          document.write("Jogador morto");
+        }
+      </script>
+
+- Agora, o programa irá imprimir se é verdadeiro ou falso! Neste caso, será printado "Jogador Vivo"
+pois o total de vidas é maior que 0!
+
+&& (and = E) - || (or = ou)
+
+Ex1:
+  <script>
+var energia=100;
+var velocidade;
+if((energia > 80)&&(energia <= 100)){
+  document.write("Energia alta");
+  velocidade=100;
+}else if((energia > 60)&&(energia < 81)){
+  document.write("Energia boa");
+  velocidade=80;
+}else if((energia > 40)&&(energia < 61)){
+  document.write("Jogador media");
+  velocidade=60;
+}else if((energia > 20)&&(energia < 41)){
+  document.write("Jogador baixa");
+  velocidade=40;
+}else if((energia > 1)&&(energia < 21)){
+  document.write("Jogador crítica");
+  velocidade=20;
+}else{
+  document.write("Jogador morto");
+  velocidade=0;
+}
+  </script>
+
+Neste caso, o valor da variável -energia- , de acordo com o resultado imprime-se um texto na tela e altera-se o valor da variável velocidade.
+
+BLOCOS DE CÓDIGO, USO DE {}
+
+Nas linguagens de programação é necessário uma forma de delimitar um bloco de código, determinar o início e o fim para que o sistema 
+que esteja compilando ou interpretando o código consiga entender onde começa e termina uma determinada ação.
+Em javascript usa-se as chaves {} para criar este limite, o uso é bem simples, veja alguns exemplos com ajuda do comando IF.
+
+Ex1:
+if(operação1){ 
+  comando 1;
+  comando 2; 
+  comando 3; 
+}
+
+if(operação2){ 
+  comando 1;
+  comando 2; 
+  comando 3; 
+}
+
+Nos exemplos acima, o uso de {} não é necessário, porém, não é errado, então os exemplos assim são perfeitamente
+válidos
+
+   Ex2:
+      if(operação1) 
+         comando 1;
+         
+      if(operação1) 
+         comando 2;
+         
+SWITCH-CASE
+
+Outro comando importante para decisão é o comando “switch”, neste caso testamos uma expressão e definimos valores possíveis
+para esta expressão (cases), cada “case” possui os comandos a serem executados, vamos ver a sintaxe de uso do comando.
+
+  Ex1:
+      switch(expressão){
+        case valor 1:
+          //comandos
+          break;
+        case valor 2:
+          //comandos
+          break;
+        case valor 3:
+          //comandos
+          break;
+        default:
+          //comandos
+}
+
+Vamos a um programa para verificar a posição de chegada de um determinado corredor e imprimir na tela o resultado.
+
+<script>
+  var pos=1;
+  switch(pos){
+    case 1:
+      document.write("Campeão");
+      break;
+  case 2:
+      document.write("Segundo lugar");
+      break;
+  case 3:
+      document.write("Terceiro lugar");
+      break;
+  default:
+      document.write("Não subiu no pódio");
+}
+</script>
+
+Neste caso, como o valor da variável é igual a 1 o resultado será “Campeão”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
