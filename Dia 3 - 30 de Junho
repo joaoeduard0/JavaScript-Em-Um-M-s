@@ -1,0 +1,134 @@
+#FUNÇÕES
+
+Uma ótima forma de controlar a execução de determinado bloco de código em um programa é utilizar funções.
+
+
+Quandro cria-se uma função, o comando somente será executado quando a função for chamada, 
+então, só será executado o comando que estão no (escopo) ou seja, no corpo da função.
+
+Outro detalhe importante, é que quanto a economia do código, se o comando precisar ser repetido várias vezes, basta adiciona-los a uma função, e este comando só será 
+executado quando a função for chamada.
+
+É muito fácil trabalhar com funções em JS, como por exemplo, um exemplo a seguir da sintaxe básica das funções:
+
+function nomeDaFunção(lista de argumentos){
+
+comandos
+comandos
+retorno da função
+
+}
+
+P.s: O retorno da função age quando os comandos já chegaram ao fim, e por isso se iniciam novamente.
+Esta é a sintaxe básica.
+
+A seguir, um exemplo de sintaxe usando funções:
+
+ Ex1:
+     function escreve(){
+                            document.write("Repositório João Eduardo<br>";
+                       }
+                    </script>
+
+No código acima, foi usado a funçaõ "escreve" com somente um comando "document.write" no seu escopo (corpo do código), então
+será impresso na tela "Repositório João Eduardo". Porém para a função ser declarada, é necessário chamar a função:
+
+    escreve();
+    escreve();
+    escreve();
+    escreve();
+    
+ Isto fará com que o "document.write" seja chamado quatro vezes!
+ 
+#ESCOPO, VARIÁVEIS LOCAIS E GLOBAIS
+
+Toda variável criada diretamente na área de script, fora de uma função é uma variável global, ou seja, pode ser acessada de qualquer lugar 
+do código.
+
+A palavra var define a varável como local, ou seja, só pode ser acessado do local onde foi criada por elementos que estejam no mesmo escopo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
