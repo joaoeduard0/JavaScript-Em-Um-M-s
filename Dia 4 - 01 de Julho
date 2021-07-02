@@ -1,0 +1,42 @@
+#Eventos
+
+Eventos são acontecimentos específicos na página, toda ação do usuário em uma página gera um evento, por exemplo,
+quando move-se o mouse, quando clica-se com o botão do mouse, quando a página é carregada, quando é selecionado um item, etc.
+
+Os eventos são disparados por determinados itens, um item pode disparar mais de um tipo de evento, por exemplo, vamos imaginar 
+o simples ato de posicionar o mouse sobre um botão submit de formulário, clicar e retirar o mouse de cima do botão, 
+consegue contar quantos e quais os eventos disparados nesta ação? Vamos conferir os eventos disparados pelo botão submit.
+
+P.s: Estado inicial, não é disparado nenhum evento.
+Alguns eventos de exemplo: 
+
+onmouseover: Quando o cursor fica sobre o botão.
+onmousemove: Toda vez que o cursor se mover sobre o botão.
+
+No momento do clique quando pressionamos o botão para baixo são disparados os eventos:
+
+onclick: Evento padrão de clique em elementos.
+onmousedown: Evento disparado quando o botão do mouse está para baixo, ou seja, quando é clicado.
+
+No momento em que o botão do mouse é solto, terminando o clique é disparado o evento onmouseup.
+
+Ao mover o cursor para fora do botão são disparados os eventos:
+onmousemove: Toda vez que o cursor se mover sobre o botão.
+onmouseout: Evento disparado quando o mouse sai de cima do botão.
+
+Eventos de mouse Evento Descrição
+onclick: Evento disparado quando se clica em um elemento
+oncontextmenu: Evento disparado quando se clica com o botão direito do mouse sobre um elemento.
+ondblclick: Evento disparado quando é aplicado um clique duplo sobre um elemento.
+onmousedown: Evento disparado quando o botão do mouse é pressionado sobre um elemento.
+onmouseenter: Evento disparado quando o ponteiro do mouse se move para cima de um elemento.
+onmouseleave: Evento disparado quando o ponteiro do mouse se move para fora de um elemento.
+onmousemove: Evento disparado quando o ponteiro do mouse se move sobre um elemento.
+onmouseover: Evento disparado quando o ponteiro do mouse é movido para dentro de um elemento ou um de seus filhos.
+onmouseout: Evento disparado quando o ponteiro do mouse é movido para fora de um elemento ou um de seus filhos.
+onmouseup: Evento disparado quando o botão do mouse é liberado, despreciando, sobre um elemento.
+
+Eventos de teclado Evento Descrição
+onkeydown: Evento disparado quando o usuário pressiona uma tecla.
+onkeypress: Evento disparado quando o usuário mantém uma tecla pressionada.
+onkeyup: Evento disparado quando o usuário libera uma tecla pressionada.
